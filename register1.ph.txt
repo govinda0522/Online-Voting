@@ -1,0 +1,46 @@
+<?php include "header.php";
+if(!isset($_SESSION)) {
+session_start();
+}
+if (isset($_SESSION['SESS_NAME'])!="") {
+	header("Location: voter.php");
+}
+?>
+<br>
+<br>
+<center>
+<legend> <h3> Register </h3></legend> </center>
+<?php global $nam; echo $nam; ?> 
+<?php global $error; echo $error; ?>
+<center><font size="4" >
+<form action= "reg_action.php" method= "post" id="myform" >
+Firstname:
+<input type="text" name="firstname" value="" required />
+<br>
+<br>
+Lastname: 
+<input type="text" name="lastname" value=""  required />
+<br>
+<br>
+Username: 
+<input type="text" name="username" value="" required />
+<br>
+<br>
+Password: 
+<input type="password" name="password" value="" required />
+<br>
+<br>
+<input type="submit" name="submit" value="Submit"  required/>
+</form>
+</font>
+</center>
+<script>
+body
+{
+image-background:url("vote1.jpeg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+</script>
+
+
